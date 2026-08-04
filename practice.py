@@ -23,16 +23,25 @@ class Microwave:
             print(f"Running ({self.brand}) for ({seconds}) seconds.")
         else:
             print(f'A mystical force whispers: "Turn on your microwave first..."')
-                    
+
+    def __add__(self, other):
+         return f"{self.brand} + {other.brand}"
+
+    def __mul__(self, other):
+         return f"{self.brand} * {other.brand}"
+
+    def __str__(self):
+         return f'{self.brand} (Rating: {self.power_rating})'
+
+    def __repr__(self):
+         return f'Microwave(brand={self.brand}, power_rating={self.power_rating})'
 
 
 smeg: Microwave = Microwave(brand='Smeg', power_rating='B' ) 
-smeg.turn_on()
-smeg.run(30)
-smeg.turn_off()
-smeg.run(10)
 
 bosch: Microwave = Microwave(brand='Bosch', power_rating='C')
-bosch.turn_on()
-bosch.turn_off()
-bosch.run(2)
+
+print(smeg + bosch)
+print(smeg * bosch)
+print(smeg)
+print(bosch)
