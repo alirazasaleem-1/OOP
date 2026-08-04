@@ -41,6 +41,8 @@ smeg: Microwave = Microwave(brand='Smeg', power_rating='B' )
 
 bosch: Microwave = Microwave(brand='Bosch', power_rating='C')
 
+samsung: Microwave = Microwave(brand='Samsung', power_rating='A')
+
 print(smeg + bosch)
 print(smeg * bosch)
 print(smeg)
