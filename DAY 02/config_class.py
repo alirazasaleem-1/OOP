@@ -19,3 +19,17 @@ class Config:
 
         # Saving 
         self.model_path = "models/model.pth"
+
+    def __str__(self):
+        return (
+            f"Dataset: {self.dataset_path}\n"
+            f"Learning Rate: {self.learning_rate}\n"
+            f"Epochs: {self.epochs}\n"
+            f"Hidden Size: {self.hidden_size}\n"
+            f"Classes: {self.num_classes}\n"
+            f"Device: {self.device}\n"
+            f"Model Path: {self.model_path}"
+        )
+
+config = Config()
+print(config)
