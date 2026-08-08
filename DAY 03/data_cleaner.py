@@ -1,5 +1,8 @@
 class DataCleaner:
 
+    def __init__(self, data ):
+        self.data = data 
+
     def clean(self):
         print("Cleaning Data...")
 
@@ -12,7 +15,8 @@ class DataCleaner:
     def encode_labels(self):
         print("Encoding labels")
 
-cleaner = DataCleaner()
+data = [10, 20, None, 50, 40]
+cleaner = DataCleaner(data)
 cleaner.clean()
 cleaner.remove_nulls()
 cleaner.normalize()
