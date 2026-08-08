@@ -1,7 +1,18 @@
 class DataCleaner:
 
     def __init__(self, data ):
-        self.data = data 
+        self.__data = data 
+
+    @property
+    def data(self):
+        return self.__data 
+
+    @data.setter
+    def data(self, new_data):
+        if isinstance(new_data, list):
+            self.__data = new_data
+        else:
+            print("Data must be a list!")
 
     def clean(self):
         print("Cleaning Data...")
@@ -17,6 +28,9 @@ class DataCleaner:
 
 data = [10, 20, None, 50, 40]
 cleaner = DataCleaner(data)
+
+print(cleaner.data)
+
 cleaner.clean()
 cleaner.remove_nulls()
 cleaner.normalize()
