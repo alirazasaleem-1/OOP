@@ -24,6 +24,7 @@ class RandomForestModel(BaseModel):
 
 model = BaseModel()
 model.train()
+model.predict()
 
 cnn = CNNModel()
 cnn.train()
