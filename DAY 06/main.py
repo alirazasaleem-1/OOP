@@ -1,5 +1,5 @@
 from pipeline import Pipeline
-from models import RandomForestModel
+from models import LinearRegressionModel
 
-pipeline = Pipeline(RandomForestModel())
+pipeline = Pipeline(LinearRegressionModel())
 pipeline.run()

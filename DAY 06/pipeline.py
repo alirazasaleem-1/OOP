@@ -1,7 +1,6 @@
 # Composition
 from dataset import Dataset
 from cleaner import DataCleaner
-from models import RandomForestModel
 
 class Pipeline:
     def __init__(self, model):
