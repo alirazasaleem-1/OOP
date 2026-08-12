@@ -1,4 +1,5 @@
 from pipeline import Pipeline
+from models import RandomForestModel
 
-pipeline = Pipeline()
+pipeline = Pipeline(RandomForestModel())
 pipeline.run()

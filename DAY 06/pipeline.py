@@ -4,10 +4,10 @@ from cleaner import DataCleaner
 from models import RandomForestModel
 
 class Pipeline:
-    def __init__(self):
+    def __init__(self, model):
         self.dataset = Dataset("data/train.csv", 1000)
         self.cleaner = DataCleaner([])
-        self.model = RandomForestModel()
+        self.model = model 
 
     def run(self):
         self.dataset.load()
